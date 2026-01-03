@@ -14,6 +14,10 @@ find_package(rclcpp REQUIRED)
 # 2. Add dependencies (ament_target_dependencies) for rclcpp
 # 3. Install the target to the DESTINATION lib/${PROJECT_NAME}
 
+install(TARGETS 
+  hello_node
+  DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
